@@ -1,0 +1,48 @@
+
+EDA SUMMARY — INDISCON 2026
+============================
+Generated: 2026-05-07 13:20
+
+DATASET NUMBERS (go into Abstract and Section 5)
+-------------------------------------------------
+Training providers total   : 5,410
+  Fraud (Yes)              : 506  (9.35%)
+  Non-Fraud (No)           : 4,904  (90.65%)
+  Imbalance ratio          : 9.7:1
+Test providers (unlabeled) : 1,353
+Beneficiary records        : 138,556
+Inpatient claim records    : 40,474
+Outpatient claim records   : 517,737
+
+ENCODING CORRECTIONS (go into Section 5.1)
+-------------------------------------------
+ChronicCond columns: values are 1 and 2, NOT 0 and 1
+  1 = Has condition, 2 = Does NOT have condition
+  Fix: (df[col] == 1).astype(int)
+Outpatient: NO AdmissionDt / DischargeDt columns (same-day visits)
+  StayDuration is INPATIENT ONLY feature
+
+MISSING VALUE STRATEGY (go into Section 5.1)
+----------------------------------------------
+Diagnosis/Procedure code columns: high % null = normal (not all codes used)
+DOD in Beneficiary: null = living patient, create binary IsDead feature
+Strategy: fill with 0 after provider-level aggregation
+
+SMOTE JUSTIFICATION (go into Section 4.4)
+------------------------------------------
+Class imbalance 10:1 means predicting always non-fraud gives 90.6% accuracy.
+SMOTE generates synthetic minority samples so model learns fraud patterns.
+Apply SMOTE ONLY to training set, AFTER the 80:20 split.
+
+BEHAVIORAL FINDINGS (go into Results section)
+-----------------------------------------------
+Fraud providers show higher avg inpatient claim amounts
+Fraud providers show longer hospital stay durations
+Fraud providers have different chronic condition patient profiles
+IP_OP_Ratio is higher for fraud providers — key behavioral signal
+
+FIGURES SAVED AT 300 DPI
+--------------------------
+fig01_class_distribution.png
+fig02_stay_duration.png
+fig03_claim_amounts.png

@@ -1,0 +1,122 @@
+{
+  "lr_top10": [
+    {
+      "rank": 1,
+      "feature": "IP_TotalStayDays",
+      "mean_shap": 3.290231423637412
+    },
+    {
+      "rank": 2,
+      "feature": "IP_NumUniqueBeneficiaries",
+      "mean_shap": 2.9286805428173293
+    },
+    {
+      "rank": 3,
+      "feature": "IP_TotalClaimAmt",
+      "mean_shap": 2.71487263282905
+    },
+    {
+      "rank": 4,
+      "feature": "IP_MaxStayDuration",
+      "mean_shap": 2.6529878227611543
+    },
+    {
+      "rank": 5,
+      "feature": "Total_ClaimAmt",
+      "mean_shap": 2.280716606125332
+    },
+    {
+      "rank": 6,
+      "feature": "IP_ClaimsPerPatient",
+      "mean_shap": 1.843242319150751
+    },
+    {
+      "rank": 7,
+      "feature": "IP_AvgDiagnosisCodes",
+      "mean_shap": 1.5799826378453943
+    },
+    {
+      "rank": 8,
+      "feature": "OP_NumClaims",
+      "mean_shap": 1.3738538344219884
+    },
+    {
+      "rank": 9,
+      "feature": "IP_AvgStayDuration",
+      "mean_shap": 1.1653439410459936
+    },
+    {
+      "rank": 10,
+      "feature": "IP_AvgClaimAmt",
+      "mean_shap": 1.1563480038789502
+    }
+  ],
+  "rf_top10": [
+    {
+      "rank": 1,
+      "feature": "IP_MaxStayDuration",
+      "mean_shap": 0.06597840167824423
+    },
+    {
+      "rank": 2,
+      "feature": "Total_ClaimAmt",
+      "mean_shap": 0.04620532371574115
+    },
+    {
+      "rank": 3,
+      "feature": "IP_TotalStayDays",
+      "mean_shap": 0.03026786944895931
+    },
+    {
+      "rank": 4,
+      "feature": "IP_ClaimsPerPatient",
+      "mean_shap": 0.02513129516536132
+    },
+    {
+      "rank": 5,
+      "feature": "Total_Deductible",
+      "mean_shap": 0.021493717259884432
+    },
+    {
+      "rank": 6,
+      "feature": "OP_PctDeadPatients",
+      "mean_shap": 0.019339102954766336
+    },
+    {
+      "rank": 7,
+      "feature": "IP_TotalClaimAmt",
+      "mean_shap": 0.019146848265044012
+    },
+    {
+      "rank": 8,
+      "feature": "OP_TotalClaimAmt",
+      "mean_shap": 0.017307464922371604
+    },
+    {
+      "rank": 9,
+      "feature": "IP_TotalDeductible",
+      "mean_shap": 0.01702405519909189
+    },
+    {
+      "rank": 10,
+      "feature": "IP_MaxClaimAmt",
+      "mean_shap": 0.016806716242654483
+    }
+  ],
+  "lr_expected_value": 0.3838186812578428,
+  "rf_expected_value": 0.5004703033392812,
+  "common_top15_features": [
+    "IP_ClaimAmtPerStayDay",
+    "IP_ClaimsPerPatient",
+    "IP_MaxStayDuration",
+    "IP_NumUniqueBeneficiaries",
+    "IP_TotalClaimAmt",
+    "IP_TotalDeductible",
+    "IP_TotalStayDays",
+    "OP_NumClaims",
+    "Total_ClaimAmt",
+    "Total_Deductible"
+  ],
+  "n_val_samples": 1082,
+  "n_features": 47
+}

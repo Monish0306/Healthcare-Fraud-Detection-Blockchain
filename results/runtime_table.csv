@@ -1,0 +1,8 @@
+Model,Train Time (s),Pred Time (s),Val AUC (%),Samples Trained On,Samples Predicted
+Random Forest,1.523,0.0898,96.84,7846,1082
+XGBoost,0.769,0.0036,96.79,7846,1082
+Logistic Regression ★,0.237,0.0,96.75,7846,1082
+AdaBoost,4.441,0.0475,96.43,7846,1082
+Gradient Boosting,18.344,0.0109,96.29,7846,1082
+Extra Trees,0.284,0.0921,96.27,7846,1082
+SVM,12.157,0.495,95.02,7846,1082
